@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+.input-form{
+    padding: 20px;
+    display: grid;
+}
+.username-input,.password-input{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+ion-icon{
+    margin-left: 5px;
+    align-items: center;
+}
+.input{
+    padding: 5px 3px;
+    text-align: center;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid rgba(75, 74, 74, 0.353);
+}
+.sign-in-modal{
+    opacity: 0;
+    z-index: -2;
+    backdrop-filter: blur(50px);
+    box-shadow: 0.5px 0.5px 1px 1px;
+    border: 2px solid rgba(75, 74, 74, 0.353);
+    color: #44475b;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: max-content;
+    padding: 40px;
+    text-align: center;
+    transition: 0.4s;
+}
+.sign-in-modal span, .otp-div-modal span{
+    font-size: 28px;
+    position: absolute;
+    top: 1px;
+    left: 91%;
+    cursor: pointer;
+}
+.form-sign-in{
+    width: max-content;
+    transform: translateX(-15px);
+    margin: 10px;
+}
+.sign-in-link, .remember-me{
+    margin: 3px 5px;
+    text-align: left;
+}
+.sign-in-link{
+    color: #6edff6;
+}
+.sign-in-add{
+  opacity: 1;
+  z-index: 2;
+}
+.input-password{
+    margin-bottom: 10px;
+}
+.remember-me{
+    margin-bottom: 10px;
+}
+.otp-div-modal{
+    z-index: -1;
+    opacity: 0;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    backdrop-filter: blur(50px);
+    justify-content: center;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    padding: 40px;
+    width: max-content;
+    text-align: center;
+    transition: 0.5s;
+}
+.show-otp-div-modal{
+    z-index: 2;
+    opacity: 1;
+}
+.Otp-text-heading{
+    margin-bottom: 20px;
+}
+.input-text-boxes{
+    display: flex;
+}
+.otp-input-post-form{
+    display: grid;
+}
+.post-btn{
+    margin-top: 10px;
+    width: max-content;
+}
+.otp-input{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-left: 10px;
+}

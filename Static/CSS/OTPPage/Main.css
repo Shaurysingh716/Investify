@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+.nav-bar-wrapper{
+    padding: 20px;
+    display: flex;
+}
+.nav-image{
+    width: 200px;
+}
+.nav-bar-left{
+    display: flex;
+    justify-content: left;
+}
+.nav-bar-right{
+    display: grid;
+    justify-content: end;
+    align-items: center;
+}
+.nav-bar-left,.nav-bar-right{
+    float: left;
+    width: 50%;
+}
+.nav-bar-btn{
+    cursor: pointer;
+    background-color: #00b386;  
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.main{
+    display: flex;
+}
+.stock-app-image-div{
+    float: left;
+    width: 25%;
+}
+.stock-app-image-div{
+    margin: 40px;
+    padding: 20px;
+}
+.otp-content-div{
+    float: left;
+    padding: 20px;
+    width: 75%;
+    height: max-content;
+    display: grid;
+    text-align: center;
+}
+.main-heading-otp-page{
+    transform: translateY(20px);
+}
+.text-otp-warning{
+    color: #00b386;
+}
+.otp-div-modal{
+    transform: translateY(60px);
+}
+.otp-input{
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+.post-btn{
+    transform: translateY(20px);
+}
+.stock-app-img{
+    width: 200px;
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body{
+    background-color: black;
+}
+.nav-bar-wrapper{
+    display: grid;
+    justify-content: center;
+}
+.nav-bar-top{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+.nav-list-elements{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    /* padding: 10px; */
+    margin: 0px 8px;
+}
+.nav-list-link{
+    text-decoration: none;
+    /* color: white; */
+}
+.nav-bar-top-form{
+    display: flex;
+    align-items: center;
+}
+.nav-bar-top-input{
+    text-align: center;
+    /* color: white; */
+    background-color: transparent;
+    width: 300px;
+    margin: 0px 20px;
+    padding: 8px 5px;
+    border-radius: 5px;
+    border: 2px solid rgba(165, 163, 163, 0.238);
+}
+.nav-list-icon-elements{
+    /* color: white; */
+    cursor: pointer;
+    margin: 0px 8px;
+    font-size: 24px;
+}
+.nav-list-icon-elements:hover,.nav-list-link:hover{
+    color: rgba(124, 173, 156, 0.723);
+}
+.investify-logo-nav-bar-top{
+    width: 200px;
+}
+.bottom-nav-list-elemets{
+    margin: 0px 20px;
+}
+.nav-bar-bottom{
+    margin: 20px;
+}
+.link-active{
+    color: rgba(124, 173, 156, 0.723);
+}

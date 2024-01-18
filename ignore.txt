@@ -1,0 +1,121 @@
+import express  from "express";
+import path from "path";
+import mongoose from "mongoose";
+const app = express();
+const port = 8000;
+
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+import cookieParser from "cookie-parser";
+import session from "express-session";
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(cookieParser());
+
+app.use('/static',express.static('static'));
+
+app.set('view engine', 'pug');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+app.set('views', path.join(__dirname,'views'));
+
+mongoose.connect("mongodb://127.0.0.1:27017/stockdb",{
+    useNewUrlParser:true, 
+    useUnifiedTopology:true
+}).then(()=>{
+    console.log("Connection Succeded");
+}).catch((err)=>{
+    console.log(err);
+});
+
+const oneDay = 60*60*24*1000;
+app.use(session({
+    secret: 'dGhpc2lzdGhlc2VjcmV0a2V5ZG9udHNoYXJld2l0aGFueW9uZQo=',
+    saveUninitialized: true,
+    cookie: {maxAge: oneDay},
+    resave: false
+}));
+
+const userInfoSchema = new mongoose.Schema({
+    PhoneNo: String
+});
+
+const Userinfo = new mongoose.model('UserInfoData',userInfoSchema);
+
+
+import Twilio from 'twilio';
+const accountSid = 'AC6eb7b5531f347ffbeffa8a9e196b1300';
+const authToken = '0debfc01581bbae78170b011bb0b84f4';
+const twilioPhoneNumber = '+17853902239';
+const client = Twilio(accountSid, authToken);
+function sendSMS(recipientNumber, message) {
+    client.messages
+    .create({
+        body: message,
+        from: twilioPhoneNumber,
+        to: recipientNumber
+    })
+    .then(message => console.log(`Message sent. SID: ${message.sid}`))
+    .catch(error => console.error(`Error sending SMS: ${error.message}`));
+};
+
+
+import fetchData, { stockChangeInt } from "./Static/JS/Landing Page/frontStockData.mjs"; 
+import { stockPriceList } from "./Static/JS/Landing Page/frontStockData.mjs";
+import { stockChange } from "./Static/JS/Landing Page/frontStockData.mjs";
+import { stockSymbolList } from "./Static/JS/Landing Page/frontStockData.mjs";
+app.get('/equity', (req,res)=>{
+    async function importValues(){
+        await fetchData().then(()=>{
+            console.log(stockSymbolList);
+            console.log(stockChange);
+            console.log(stockPriceList);
+            res.status(200).render('landingPage.pug',{stockpricelistvar:stockPriceList,stockchangevar:stockChange,stocksymbolvar:stockSymbolList,stockchangeintlist:stockChangeInt});
+        })
+        // console.log(stockPriceList);
+        // console.log(stockChange);
+    }
+    importValues();
+});
+
+
+app.get('/',(req,res)=>{
+    res.status(200).render('loginpage.pug');
+    console.log(req.session);
+});
+
+import genrateRandomNumber from "./Static/JS/Login Page/generateOTP.mjs";
+app.post('/',(req,res)=>{
+    req.session.PhoneNo = req.body.PhoneNo;
+    console.log(req.body);
+    console.log(req.session);
+    console.log(req.body.PhoneNo);
+    req.session.OTP = genrateRandomNumber(10000,99999);
+    req.session.message = `Welcome To Investify!\nYour One Time Password (OTP) For Verification At Investify is ${req.session.OTP}\nPlease Do Not Share This OTP With ANYONE, Even-if the said person Claims To Be Related With Investify\nDon't Just Invest, Investify`;
+    sendSMS("+91"+req.session.PhoneNo,req.session.message);
+    res.status(200).redirect('/verify');
+    console.log(req.session);
+});
+
+app.get('/verify',(req,res)=>{
+    res.status(200).render('otpPage.pug');
+})
+
+app.post('/verify',(req,res)=>{
+    req.session.OTPCheck = req.body.OTPinput1 + req.body.OTPinput2 + req.body.OTPinput3 + req.body.OTPinput4 + req.body.OTPinput5;
+    console.log(req.session);
+    var body_ = new Userinfo(session.PhoneNo);
+    if (req.session.OTPCheck == req.session.OTP){
+        body_.save().then(()=>{
+            console.log("Item Saved To Database");
+            res.status(200).redirect('/equity');
+            console.log(req.session);
+        })
+    } else{
+        res.status(401).send("401: Unauthorised -- Please Enter Correct OTP");
+    }
+});
+
+app.listen(port, ()=>{
+    console.log(`Application Started On Port ${port} at Localhost 127.0.0.1`);
+});

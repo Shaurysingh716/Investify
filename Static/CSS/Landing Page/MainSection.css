@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body{
+    overflow: hidden;
+}
+main{
+    overflow-y: scroll;
+    height: 650px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+.main-content-wrapper{
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+}
+.index-stock-wrapper{
+    margin-top: 20px;
+}
+.index-div{
+    width: 100vh;
+    display: flex;
+}
+.stock-prices-large-cap{
+    display: flex;
+    padding: 20px;
+}
+.card{
+    cursor: pointer;
+    margin: 20px;
+    display: grid;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 230px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.434);
+    font-family: 'Lato', sans-serif;
+    padding: 10px;
+}
+.card a{
+    text-decoration: none;
+}
+/* .card img{
+    margin: 3px 5px;
+    width: 30px;
+} */
+.stock-data-div{
+    display: flex;
+    margin-top: 10px;
+}
+.stock-change{
+    /* color: #0abb92; */
+    margin: 0px 10px;
+}
+.positive{
+    color: #0abb92;
+}
+.negative{
+    color: #d55438;
+}
+.index-heading{
+    font-family: 'Lato', sans-serif;
+}
+.nav-list-start{
+    float: left;
+    width: 50%;
+}
+.heading-link{
+    color: rgba(124, 173, 156, 0.723);
+}
+.nav-list-end{
+    text-align: end;
+    float: left;
+    width: 50%;
+}

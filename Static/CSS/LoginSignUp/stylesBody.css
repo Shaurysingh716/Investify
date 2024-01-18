@@ -1,0 +1,21 @@
+.body{
+    background-image: url('../../Static Images/BSEImage.png');
+    background-repeat: no-repeat;
+    background-size: 1024px;
+    background-position: 50% -90%;
+}
+.heading-body-btn{
+    margin-top: 20px;
+}
+.content-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.body-heading{
+    color: #00b386;
+}
+.body-heading-main{
+    color: #44475b;
+}

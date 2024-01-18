@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest Into Mututal Funds, Bonds, Equity - Investify</title>
+    <link rel="stylesheet" href="../Static/CSS/OTPPage/Main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar-tag">
+            <div class="nav-bar-container" data-aos="fade-down" data-aos-duration="2000">
+                <div class="nav-bar-wrapper">
+                    <div class="nav-bar-left">
+                        <img src="../Static/StaticImages/InvestifyLogo.jpeg" alt="" class="nav-left-image nav-image">
+                    </div>
+                    <div class="nav-bar-right">
+                        <button class="nav-bar-btn registration-btn" onclick="showModal()">Login/Register</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="stock-app-image-div">
+            <img data-aos="slide-right" data-aos-duration="2000"  src="../Static/Static Images/BuyInfosys.png" alt="" class="stock-app-img">
+        </div>
+        <div data-aos="slide-left" data-aos-duration="2000" class="otp-content-div">
+            <h2 class="main-heading-otp-page tag-line-heading">Welcome To Investify! Don't Just Invest...Groww!</h2>
+            <h3 class="main-heading-otp-page">Enter Your OTP Here: </h3>
+            <p class="main-heading-otp-page text-otp-warning">NOTE: This OTP Will Only Be Valid For 5 Minutes</p>
+            <div class="otp-div-modal">
+                <form class="otp-input-post-form" action="" method="post">
+                    <div class="input-text-boxes">
+                        <input name="OTPinput1" type="number" class="otp-input" id="otp-input-1" maxlength="1">
+                        <input name="OTPinput2" type="number" class="otp-input" id="otp-input-2" maxlength="1">
+                        <input name="OTPinput3" type="number" class="otp-input" id="otp-input-3" maxlength="1">
+                        <input name="OTPinput4" type="number" class="otp-input" id="otp-input-4" maxlength="1">
+                        <input name="OTPinput5" type="number" class="otp-input" id="otp-input-5" maxlength="1">
+                    </div>
+                    <div class="submit-btn-div">
+                        <button class="post-btn nav-bar-btn" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();</script>
+script(src="../Static/JS/OTPage/cursorShift.js") 
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest Into Mututal Funds, Bonds, Equity - Investify</title>
+    //- link(rel="stylesheet" href="path-to-aos/aos.css")
+    //- script(src="path-to-aos/aos.js")
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../Static/CSS/LoginSignUp/styleNavbar.css">
+    <link rel="stylesheet" href="../Static/CSS/LoginSignUp/stylesBody.css">
+    <link rel="stylesheet" href="../Static/CSS/LoginSignUp/stylesModal.css">
+</head>
+<body class="body">
+    <div class="sign-in-modal">
+        <span onclick="removeModal()">&times;</span>
+        <h2 class="form-heading">Sign Up On Groww</h2>
+        <form class="input-form" id="post-form-user-credentials" method="POST" action="/">
+          <div class="username-input">
+            <input name="PhoneNo" class="input sign-in-form-input" type="number" placeholder="Phone No.">
+            <ion-icon name="mail-outline"></ion-icon>
+          </div>
+          <a class="sign-in-link" href="/">Have An Account? Log-in</a>
+          <div class="remember-me">
+            <input class="remember-me" type="checkbox"> Remember Me
+          </div>
+          <div class="btn-div">
+            <button id="post-form-credentials-btn" onclick="showOTPModal()" class="sign-in-btn form-sign-in nav-bar-btn">Sign In</button>
+          </div>
+        </form>
+    </div>
+    <header class="header">
+        <nav class="nav-bar-tag">
+            <div class="nav-bar-container" data-aos="fade-down" data-aos-duration="2000">
+                <div class="nav-bar-wrapper">
+                    <div class="nav-bar-left">
+                        <img src="../Static/Static Images/InvestifyLogo-removebg-preview.png" alt="" class="nav-left-image nav-image">
+                    </div>
+                    <div class="nav-bar-center">
+                        <input type="text" placeholder="What Do You Want To Do Today?" class="nav-input-center nav-bar-elements">
+                    </div>
+                    <div class="nav-bar-right">
+                        <button class="nav-bar-btn registration-btn" onclick="showModal()">Login/Register</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="heading-element-body" data-aos="fade-in" data-aos-duration="2000" data-aos-duration="5000">
+            <div class="content-wrapper">
+                <h1 class="body-heading-main heading-typing" id="word"></h1>
+                <h1 class="body-heading-main">Don't Just Invest, Groww!!</h1>
+                <h2 class="body-heading">Built For A Growwing India</h2>
+                <button class="nav-bar-btn heading-body-btn" onclick="showModal()">Get Started</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="../Static/JS/Login Page/modal.js"></script>
+    <script src="../Static/JS/Login Page/index.js"></script>
+    <script src="../Static/JS/Login Page/XMLRequests.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

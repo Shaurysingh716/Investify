@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Phudu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+
+}
+.btn-sell{
+    background-color: #d55438;
+}
+.btn-buy{
+    background-color: #0abb92;
+    padding: 5px 8px;
+    font-family: 'Roboto', sans-serif;
+    border: 0.8px solid rgba(162, 157, 157, 0.567);
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btns a{
+    align-items: center;
+    display: grid;
+    background-color: #d55438;
+    height: max-content;
+    padding: 5px 8px;
+    font-family: 'Roboto', sans-serif;
+    border: 0.8px solid rgba(162, 157, 157, 0.567);
+    border-radius: 10px;
+    font-size: 18px;
+    transform: translateY(7.9px);
+    text-decoration: none;
+}
+.set-input{
+    background-color: transparent;
+    border: 0.8px solid rgba(162, 157, 157, 0.567);
+    padding: 5px 5px;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.width{
+    width: 800px;
+}
+.font-main{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+.heading-link{
+    color: rgba(124, 173, 156, 0.723);
+}
+.low-cap-font{
+  font-family: 'Roboto', sans-serif;
+}
+.nav-font-large{
+  font-size: large;
+  font-family: 'Phudu', cursive;
+  color: #006699;
+}
+.slide-img{
+  width: 100%;
+  height: 60vh;
+}
+.border-div{
+  border: 2px solid black;
+}
+.font{
+  color: #006699;
+}
+.font-rem{
+  color: #006699;
+  font-family: 'Phudu', cursive;
+}
+.mar-right{
+  margin-right: 15px;
+}
+.nav-font{
+  color: #006699;
+  font-family: 'Phudu', cursive;
+}
+.main-font{
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
+.body-font{
+  font-family: 'Young Serif', serif;
+}
+.padding-main{
+  padding: 20px 60px;
+}
+.borders{
+  box-sizing: border-box;
+  border: 2px solid rgba(55, 52, 52, 0.554);
+  border-radius: 10px;
+}
+.bottom-bor{
+  border-bottom: 0.125rem solid rgba(0,0,0,.18);
+}
+.border-bottom{
+  box-shadow: 0 0.0625rem 0.125rem rgba(0,0,0,.18);
+}
+.padding-extra{
+  margin: 20px 30px;
+}
+.padding-btn{
+  padding: 5px;
+}
+.margin-bottom{
+  margin-bottom: 15px;
+}
+.margin-main{
+  margin: 8px 10px;
+}
+.margin-right-low{
+  margin-right: 2px;
+}
+.margin-extra{
+    margin: 20px 30px;
+}
+.nav-bar-dark-violet{
+  color: white;
+  background-color: #322348;
+}
+.nav-bar-violet{
+  color: white;
+  background-color: #563d7c;
+}
+.dark-mode-back{
+  background-color: #343a40;
+}
+.list-no-style{
+  list-style: none;
+}
+.light-mode-back{
+  color: #343a40;
+  background-color: white;
+}
+.primary-btn{
+  border: 2px solid rgba(63, 61, 61, 0.608);
+  font-size: 15px;
+  border-radius: 5px;
+  color: white;
+  background-color: #007bff;
+}
+.back-transparent-border-none{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.position-relative{
+  position: relative;
+}
+.position-center-screen{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,50%);
+}
+.hide-grid{
+  z-index: -2;
+  opacity: 0;
+}
+.show-grid{
+  z-index: 1;
+  opacity: 1;
+}
+.transition-slow{
+  transition: 0.9s;
+}
+.transition-fast{
+  transition: 0.4s;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.width-half{
+  width: 50%;
+}
+.width-content{
+  width: max-content;
+}
+.float-90-input{
+    float: left;
+    width: 90%;
+}
+.width-input-buy-sell{
+    width: 75px;
+}
+.width-full{
+  width: 100%;
+}
+.width-form-input{
+  width: 200px;
+}
+.align-center{
+  align-items: center;
+}
+.align-left{
+  align-items: left;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-end{
+  justify-content: end;
+}
+.primary-light-text{
+  color: white;
+  background-color: #343a40;
+}
+.primary-dark-text{
+  color: #343a40;
+}
+.primary-flex{
+  display: flex;
+}
+.primary-grid{
+  display: grid;
+}
+.nav-image{
+  width: 150px;
+}
+.image-logo{
+  width: 70px;
+}
+.form-image-left{
+  width: 500px;
+  height: 200px;
+}
+.form-width{
+  width: 200px;
+  padding: 8px 5px;
+  font-family: 'Phudu', cursive;
+}
+.blur{
+  backdrop-filter: blur(10px);
+}
+.float-50{
+  float: left;
+  width: 50%;
+}
+.margin-left{
+  margin-left: 30px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.z-index-outer{
+  z-index: 2;
+}
+/* :colors {
+  --primary: #007bff;
+  --dark: #343a40;
+  --violet: #563d7c;
+  --dark-violet: #322348;
+} */

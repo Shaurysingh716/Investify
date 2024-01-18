@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest Into Mututal Funds, Bonds, Equity - Investify</title>
+    <link rel="stylesheet" href="../Static/CSS/Landing Page/NavBar.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-bar-wrapper">
+                <div class="nav-bar-top">
+                    <img src="../Static/Static Images/InvestifyLogo-removebg-preview.png" alt="" class="investify-logo-nav-bar-top">
+                    <ul class="nav-list">
+                        <li class="nav-list-elements"><a href="" class="nav-list-link">Explore</a></li>
+                        <li class="nav-list-elements"><a href="" class="nav-list-link">Investments</a></li>
+                    </ul>
+                    <form action="/" class="nav-bar-top-form" method="post">
+                        <input class="nav-bar-top-input" id="stockNameSymForm" name="stockName" type="text" placeholder="What Are You Looking For Today?">
+                    </form>
+                    <ul class="nav-list-icons">
+                        <ion-icon class="nav-list-icon-elements" name="notifications-outline"></ion-icon>
+                        <ion-icon class="nav-list-icon-elements" name="wallet-outline"></ion-icon>
+                        <ion-icon class="nav-list-icon-elements" name="cart-outline"></ion-icon>
+                        <ion-icon class="nav-list-icon-elements" name="contrast-outline"></ion-icon>
+                    </ul>
+                </div>
+                <div class="nav-bar-bottom">
+                    <ul class="nav-list">
+                        <li class="nav-list-elements bottom-nav-list-elemets"><a href="" class="nav-list-link link-active">Equity</a></li>
+                        <li class="nav-list-elements bottom-nav-list-elemets"><a href="" class="nav-list-link">Mutual Funds</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="primary-flex font-rem margin-extra justify-center">
+            <h2 class="heading-link">Your Investments: </h2>
+        </div>
+        <div class="main-section-div primary-grid margin-extra borders width">
+            <div class="primary-flex margin-main font-main">
+                p.float-50.mar-right.font-main= CompanyNameOnly
+                p.float-50.justify-end.primary-flex.font-main= Symbol
+            </div>
+            <div class="primary-flex margin-main font-main mar-right">
+                <p class="primary-flex">Current Price</p>
+                p.primary-flex.font-main= CurrentPrice
+            </div>
+            <div class="primary-flex margin-main font-main mar-right">
+                <div class="primary-flex float-50">
+                    <p class="font-main">52-Week High:&nbsp;</p>
+                    p.font-main= weekHigh
+                </div>
+                <div class="primary-flex float-50 justify-end primary-flex">
+                    <p class="font-main">52-Week Low:&nbsp;</p>
+                    p.font-main=weekLow
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

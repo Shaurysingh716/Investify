@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest Into Mututal Funds, Bonds, Equity - Investify</title>
+    <link rel="stylesheet" href="../Static/CSS/Landing Page/NavBar.css">
+    <link rel="stylesheet" href="../Static/CSS/Landing Page/MainSection.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-bar-wrapper">
+                <div class="nav-bar-top">
+                    <img src="../Static/Static Images/InvestifyLogo-removebg-preview.png" alt="" class="investify-logo-nav-bar-top">
+                    <ul class="nav-list">
+                        <li class="nav-list-elements"><a href="" class="nav-list-link">Explore</a></li>
+                        <li class="nav-list-elements"><a href="" class="nav-list-link">Investments</a></li>
+                    </ul>
+                    <form action="/" class="nav-bar-top-form" method="post">
+                        <input class="nav-bar-top-input" id="stockNameSymForm" name="stockName" type="text" placeholder="What Are You Looking For Today?">
+                    </form>
+                    <ul class="nav-list-icons">
+                        <ion-icon class="nav-list-icon-elements" name="notifications-outline"></ion-icon>
+                        <ion-icon class="nav-list-icon-elements" name="wallet-outline"></ion-icon>
+                        <ion-icon class="nav-list-icon-elements" name="cart-outline"></ion-icon>
+                        <ion-icon class="nav-list-icon-elements" name="contrast-outline"></ion-icon>
+                    </ul>
+                </div>
+                <div class="nav-bar-bottom">
+                    <ul class="nav-list">
+                        <li class="nav-list-elements bottom-nav-list-elemets"><a href="" class="nav-list-link link-active">Equity</a></li>
+                        <li class="nav-list-elements bottom-nav-list-elemets"><a href="" class="nav-list-link">Mutual Funds</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="main-content-wrapper">
+            <div class="index-stock-wrapper">
+                <div class="index-div">
+                    <ul class="nav-list-start">
+                        <h3 class="index-heading">Large Cap</h3>
+                    </ul>
+                    <ul class="nav-list-end">
+                        <h3 class="index-heading heading-link">All Stocks</h3>
+                    </ul>
+                </div>
+                <div class="stock-prices-large-cap">
+                    each index in [0,1,2]
+                        div.card
+                            a(href= stockDBCode[index]).stock-name= stockSymbolVar[index]
+                            div.stock-data-div
+                                - const stockChange = stockChangeVar[index]
+                                p.stock-price= stockPriceListVar[index]
+                                p#change.stock-change(class=stockChange >= 0 ? 'positive' : 'negative')= stockChangeVar[index] 
+                </div>
+            </div>
+            <div class="index-stock-wrapper">
+                <div class="index-div">
+                    <ul class="nav-list-start">
+                        <h3 class="index-heading">Small Cap</h3>
+                    </ul>
+                    <ul class="nav-list-end">
+                        <h3 class="index-heading heading-link">All Stocks</h3>
+                    </ul>
+                </div>
+            <div class="stock-prices-large-cap">
+                each index in [3,4,5]
+                    div.card
+                        a(href= stockDBCode[index]).stock-name= stockSymbolVar[index]
+                        div.stock-data-div
+                            - const stockChange = stockChangeVar[index]
+                            p.stock-price= stockPriceListVar[index]
+                            p#change.stock-change(class=stockChange >= 0 ? 'positive' : 'negative')= stockChangeVar[index] 
+            </div>
+            </div>
+            <div class="index-stock-wrapper">
+                <div class="index-div">
+                    <ul class="nav-list-start">
+                        <h3 class="index-heading">Mid Cap</h3>
+                    </ul>
+                    <ul class="nav-list-end">
+                        <h3 class="index-heading heading-link">All Stocks</h3>
+                    </ul>
+                </div>
+            <div class="stock-prices-large-cap">
+                each index in [6,7,8]
+                    div.card
+                        a(href= stockDBCode[index]).stock-name= stockSymbolVar[index]
+                        div.stock-data-div
+                            - const stockChange = stockChangeVar[index]
+                            p.stock-price= stockPriceListVar[index]
+                            p#change.stock-change(class=stockChange >= 0 ? 'positive' : 'negative')= stockChangeVar[index] 
+            </div>
+            </div>
+            <div class="index-stock-wrapper">
+                <div class="index-div">
+                    <ul class="nav-list-start">
+                        <h3 class="index-heading">Most Bought On Investify</h3>
+                    </ul>
+                    <ul class="nav-list-end">
+                        <h3 class="index-heading heading-link">All Stocks</h3>
+                    </ul>
+                </div>
+            <div class="stock-prices-large-cap">
+                each index in [9,10,11]
+                    div.card
+                        a(href= stockDBCode[index]).stock-name= stockSymbolVar[index]
+                        div.stock-data-div
+                            - const stockChange = stockChangeVar[index]
+                            p.stock-price= stockPriceListVar[index]
+                            p#change.stock-change(class=stockChange >= 0 ? 'positive' : 'negative')= stockChangeVar[index] 
+            </div>
+            </div>
+        </div>
+    </main>
+</body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    script(type="module", src="../Static/JS/Landing Page/dataImportFiles.mjs") 
+    <!-- script(type="module", src="../Static/JS/Landing Page/frontStockData.mjs")   -->
+</html>
